@@ -1,6 +1,10 @@
 
 # <h1 align=center> **PROYECTO INDIVIDUAL Nº1** </h1>
 
+<div style="text-align: center;">
+    <img src="store_home_share.jpg" width="800">
+</div>
+
 # <h1 align=center> **Recomendador de juegos STEAM. FastAPI y deployment en Render** </h1>
 
 ## **Introducción**
@@ -37,10 +41,11 @@ Luego se analizó las variables continuas a cada una por separado. Con un gráfi
 
 
 ## ML-Clustering
+
 Ya habiendo analizado los datos pasamos a la sección de machine learning. Tenemos que hacer una buena selección de los hiperparámetros del algoritmo que haga el agrupamiento de los juegos por similitud.
 Elegimos el modelo K-Means de Scikit learn para hacer el agrupamiento utilizando la distancia euclidea para el cómputo, buscar similares y elegir el mejor centroide. Para calibrarlo correctamente se usó el método del codo para determinar que con k = 25 clusters se conseguía una buena inercia.
 
-### Main
+## Main
 En el main se ejecuta la API de FastAPI que nos brinda la interfaz para que podamos consumir nuestro recomendador de juegos. La aplicación tiene los siguientes endpoints, los primeros cinco en los que tenemos que aplicar transformaciones y cálculo para conseguir un resultado determinado y los dos últimos ejecutan los resultados de nuestro recomendador de juegos:
 
 + def **PlayTimeGenre( *`genero`* )**:
@@ -69,3 +74,7 @@ En el main se ejecuta la API de FastAPI que nos brinda la interfaz para que poda
 
 + def **recomendacion_usuario( *`user_id`* )**:
     Ingresando el id de un usuario, deberíamos recibir una lista con 5 juegos recomendados para dicho usuario.
+
+
+
+*Link del video del funcionamiento de la aplicación*: https://www.youtube.com/watch?v=fbEDCRIX7EU
